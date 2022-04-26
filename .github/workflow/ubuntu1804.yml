@@ -1,0 +1,12 @@
+name: Container
+on: push
+
+jobs:
+  node-docker:
+    runs-on: ubuntu-latest
+    container:
+      image: ubuntu:18.04
+    steps:
+      - name: bincomp
+        run: |
+          cat /etc/os-release
