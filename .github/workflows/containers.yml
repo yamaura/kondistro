@@ -1,0 +1,31 @@
+name: Container
+on: push
+
+jobs:
+  ubuntu1804:
+    runs-on: ubuntu-latest
+    container:
+      image: ubuntu:18.04
+    steps:
+      - name: bincomp
+        run: |
+          ./bin/bincomp
+
+  centos7:
+    runs-on: ubuntu-latest
+    container:
+      image: centos:7
+    steps:
+      - name: bincomp
+        run: |
+          ./bin/bincomp
+
+  almalinux8:
+    runs-on: ubuntu-latest
+    container:
+      image: almalinux:8
+    steps:
+      - name: bincomp
+        run: |
+          ./bin/bincomp
+

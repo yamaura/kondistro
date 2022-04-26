@@ -1,0 +1,2 @@
+#!/bin/sh
+bash -c "[ -e /usr/bin/rpm ] && ( rpm --eval %{dist} | cut -b1- ) || ( source /etc/os-release && echo \${ID}\${VERSION_ID:-} )"
